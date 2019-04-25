@@ -4,5 +4,3 @@ workbox.routing.registerRoute(
   /\.(?:js|css)$/,
   new workbox.strategies.StaleWhileRevalidate(),
 );
-
-workbox.googleAnalytics.initialize(); 
