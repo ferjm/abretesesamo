@@ -34,6 +34,15 @@ button::-moz-focus-inner {
 
 button span { position: relative; }
 
+.footer {
+   position:fixed;
+   left:0px;
+   bottom:0px;
+   height:30px;
+   width:100%;
+   text-align: center;
+}
+
 /* fix for IE 11 (and IE8+, although the earlier versions are harder to address) stupidly moving the inner button text on click */
 .pressed { 
   padding-top: 3px;
