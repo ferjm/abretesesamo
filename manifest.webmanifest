@@ -1,0 +1,15 @@
+{
+  "background_color": "red",
+  "description": "Control remoto para abrir las puertas de entrada al Olivar de Boadilla",
+  "display": "fullscreen",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "192x35",
+      "type": "image/png"
+    }
+  ],
+  "name": "El Olivar - Puertas",
+  "short_name": "ElOlivar",
+  "start_url": "https://ferjm.github.io/abretesesamo/index.html"
+}
