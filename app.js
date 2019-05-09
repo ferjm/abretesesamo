@@ -4,16 +4,33 @@ if ('serviceWorker' in navigator) {
   });
 }
 
-const open = document.querySelector('button');
-open.addEventListener('click', function() {
-  open.classList.add('pressed');
-  fetch('https://ferjm.ngrok.io/open', {
+function onclick(event) {
+  event.target.classList.add('pressed');
+  console.log(event.target.id);
+  let id;
+  switch(event.target.id) {
+    case 'exterior':
+      id = 18;
+      break;
+    case 'interior':
+      id = 23;
+      break;
+    case 'both':
+      id = 'all';
+      break;
+  }
+  const url = `https://ferjm.ngrok.io/open/${id}`;
+  fetch(url, {
     method: 'post',
     mode: 'cors'
   }).then(function() {
-    open.classList.remove('pressed');
+    event.target.classList.remove('pressed');
   }).catch(function() {
-    open.classList.remove('pressed');
+    event.target.classList.remove('pressed');
   });
-});
+  event.preventDefault();
+}
 
+['exterior', 'interior', 'both'].forEach(id => {
+  document.getElementById(id).addEventListener('click', this.onclick);
+});
